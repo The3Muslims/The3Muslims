@@ -731,11 +731,15 @@ padding: 3px;
 
 .mainicon1{
 background: #bb0000;
-  color: white;
+color: white;
+length: 10px;
+height: 10px;
 }
 
 
 .mainicon2{
 background: #ff5700;
-  color: black;
+color: black;
+length: 10px;
+height: 10px;
 }
