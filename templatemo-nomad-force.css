@@ -724,3 +724,7 @@ strong {
 #overlay{
 	opacity: 50%;
 }
+
+.space1{
+padding: 3px;
+}
