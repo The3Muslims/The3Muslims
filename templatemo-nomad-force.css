@@ -728,3 +728,14 @@ strong {
 .space1{
 padding: 3px;
 }
+
+.mainicon1{
+background: #bb0000;
+  color: white;
+}
+
+
+.mainicon2{
+background: #ff5700;
+  color: black;
+}
