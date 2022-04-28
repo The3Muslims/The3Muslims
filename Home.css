@@ -118,7 +118,7 @@
   .u-section-2 .u-text-1 {
     margin: 100px auto 0;
     margin-bottom: 52px;
-    line-height: 1.5rem;
+    line-height: 1.0;
   }
 }
 
@@ -141,7 +141,7 @@
   .u-section-2 .u-text-1 {
     margin: 100px auto 0;
     margin-bottom: 52px;
-    line-height: 1.5rem;
+    line-height: 1.0;
   }
 } 
 
@@ -157,6 +157,7 @@
   .u-section-2 .u-text-1 {
     margin: 100px auto 0;
     margin-bottom: 52px;
+    line-height: 1.0;
   }
 
   .u-section-2 .u-text-2 {
