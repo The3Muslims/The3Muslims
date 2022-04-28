@@ -246,6 +246,6 @@
 }
 
 .donate-btn{
-  height: 110%;
-  width: 110%;
+  max-height: 80%;
+  max-width: 80%;
 }
