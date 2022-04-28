@@ -31,7 +31,7 @@
   margin: 120px auto 0;
   margin-bottom: 60px;
   padding-top: 15px;
-  line-height: 300px;
+  overflow-wrap: break-word;
 }
 
 .u-section-2 .u-text-2 {
@@ -41,6 +41,7 @@
   background-image: none;
   width: 720px;
   margin: 20px auto 38px;
+
 }
 
 .donate-btn{ 
