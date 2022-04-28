@@ -72,7 +72,17 @@
   .u-section-2 .u-text-1 {
     margin: 100px auto 0;
     margin-bottom: 52px;
-    line-height: 1.5rem;
+    line-height: 3rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .u-section-2 {
+    margin-top: 100px;
+  }
+
+  .u-section-2 .u-text-1 {
+    line-height: 3.5rem;
   }
 }
 
@@ -89,14 +99,18 @@
   }
 
   .u-section-2 {
-    margin-top: -10px;
+    margin-top: 100px;
   }
 
   .u-section-2 .u-text-1 {
     margin: 100px auto 0;
     margin-bottom: 52px;
-    line-height: 1.5rem;
-    max-width: 90%;
+    line-height: 3.5rem;
+    font-size: 3rem;
+    max-width: 80%;
+  }
+  .u-section-2 .u-text-2 {
+    max-width: 80%;
   }
 }
 
@@ -165,6 +179,7 @@
     width: 468px;
     margin-bottom: 43px;
     line-height: 1.5rem;
+    max-width: 80%;
   }
 }
 
