@@ -1,7 +1,8 @@
 <script lang=ts>
+    import type { ComponentType } from "svelte";
     import { isRoute, route } from "./router"
 
-    export let component: any
+    export let component: ComponentType;
     export let path: string
 </script>
 
