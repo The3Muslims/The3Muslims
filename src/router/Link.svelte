@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { route } from "../stores";
+    import { route } from "./router";
 
     const navigate = (to: string) => {
         window.history.pushState({}, '', to);
