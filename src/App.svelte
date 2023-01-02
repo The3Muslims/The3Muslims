@@ -11,6 +11,6 @@
 <main class="p-5">
   <Router>
     <Route path="/" component={Home} />
-    <Route path="/videos/:id" component={Videos} />
+    <Route path="/videos/:id/:test" component={Videos} />
   </Router>
 </main>

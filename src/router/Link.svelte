@@ -1,9 +1,10 @@
 <script lang="ts">
-    import { route } from "./router";
-
+    import { route, params, getParams } from "./router";
+    
     const navigate = (to: string) => {
         window.history.pushState({}, '', to);
         route.set(to);
+        params.set(getParams());
     };
 
     export let to: string;

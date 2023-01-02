@@ -1,9 +1,10 @@
-import { writable, get } from "svelte/store";
+import { writable, get, type Writable } from "svelte/store";
 
 export const route = writable(window.location.pathname);
 export const pathstring = writable('');
+export const params: Writable<Record<string, any>> = writable({});
 
-export const getParams = (): {[key: string]: string} => {
+export const getParams = () => {
     const pathParts = get(pathstring).split('/');
     const routeParts = get(route).split('/');
     const params = {};
@@ -37,4 +38,3 @@ export const isRoute = (path: string) => {
 
   return true;
 }
-  
