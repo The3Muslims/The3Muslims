@@ -1,0 +1,15 @@
+{
+  "name": "svelte-router-dom",
+  "version": "1.0.0",
+  "description": "React-like SPA router for Svelte.",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "author": "yayashn",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^4.9.4"
+  }
+}

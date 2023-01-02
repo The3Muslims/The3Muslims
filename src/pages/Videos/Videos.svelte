@@ -1,6 +1,5 @@
 <script lang=ts>
-    import Link from "../../router/Link.svelte";
-    import { params } from "../../router/router";
+    import { Link, params } from "../../router/index"
 </script>
 
 <h1 class="font-bold">videos</h1>
