@@ -9,7 +9,7 @@
 ## Development Cycle
 To avoid accidental overwriting of content between developers follow these steps when developing new features:
 - Create a new branch with the following command and give it an appropriate name eg:
-  `git checkout -b "feat/home-page-tweaks"
+  `git checkout -b "feat/home-page-tweaks"`
 - Once finished with your feature, merge your commits to the `master` branch:
   ```
   git checkout master
