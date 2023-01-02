@@ -1,16 +1,21 @@
 import { writable, get } from "svelte/store";
 
 export const route = writable(window.location.pathname);
+export const pathstring = writable('');
 
-export const getParams = (path: string): {[key: string]: string} => {
-    const paramRegex = /\/:(\w+)/g;
-    const params: {[key: string]: string} = {};
-    let match: any[];
-    while ((match = paramRegex.exec(path)) !== null) {
-        const paramName = match[1];
-        const paramValue = match[2];
-        params[paramName] = paramValue;
+export const getParams = (): {[key: string]: string} => {
+    const pathParts = get(pathstring).split('/');
+    const routeParts = get(route).split('/');
+    const params = {};
+    
+    for (let i = 0; i < pathParts.length; i++) {
+      const pathPart = pathParts[i];
+      const routePart = routeParts[i];
+      if (pathPart[0] === ':') {
+        params[pathPart.slice(1)] = routePart;
+      }
     }
+    
     return params;
 }
 

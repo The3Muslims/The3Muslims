@@ -43,7 +43,7 @@ npm install svelte-client-router
 ### Link
 * `to: string`
 
-### getParams()
+### getParams(path: string)
 returns an object containing key-value pairs of paramName:paramValue.
 ```js
 // path string: /posts/:id
