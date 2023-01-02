@@ -1,14 +1,8 @@
-<script lang="ts">
+<script lang=ts>
   import { route } from "./stores"
   import Home from './pages/Home/Home.svelte';
   import Videos from './pages/Videos/Videos.svelte';
   import Navbar from "./components/Navbar.svelte";
-
-  let routeValue: string;
-
-  route.subscribe(value => {
-    routeValue = value;
-  });
 
   window.addEventListener('popstate', () => {
     route.set(window.location.pathname);
@@ -18,9 +12,9 @@
 <Navbar />
 
 <main class="m-5">
-  {#if routeValue === '/'}
+  {#if $route === '/'}
     <Home />
-  {:else if routeValue === '/videos'}
+  {:else if $route === '/videos'}
     <Videos />
   {:else}
     <h1>404</h1>

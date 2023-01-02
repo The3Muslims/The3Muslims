@@ -1,15 +1,15 @@
 <script lang="ts">
     import { route } from "../stores";
 
-    const navigate = (path: string) => {
-        window.history.pushState({}, '', path);
-        route.set(path);
+    const navigate = (to: string) => {
+        window.history.pushState({}, '', to);
+        route.set(to);
     };
 
-    export let path: string;
+    export let to: string;
 </script>
 
-<button class={$$props.class}
-on:click={() => navigate(path)}>
+<button role="link" id={$$props.id} class={$$props.class}
+on:click={() => navigate(to)}>
     <slot />
 </button>
