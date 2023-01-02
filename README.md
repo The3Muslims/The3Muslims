@@ -13,6 +13,7 @@ To avoid accidental overwriting of content between developers follow these steps
 - Once finished with your feature, merge your commits to the `master` branch:
   ```
   git checkout master
+  git pull
   git merge "feat/home-page-details"
   ```
 
