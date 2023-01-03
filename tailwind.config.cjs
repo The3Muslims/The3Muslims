@@ -8,7 +8,12 @@ module.exports = {
     "./src/**/**/**/**/*.svelte",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        "background": "rgb(68,42,41)",
+        "foreground": "rgb(238,219,165)",
+      }
+    },
   },
   plugins: [],
 }

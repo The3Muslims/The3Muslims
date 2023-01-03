@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+    @apply bg-gradient-to-br from-[rgb(81,51,49)] to-[rgb(51,29,30)] h-screen
+}
+
+p, span, a, li, td, th, h1, h2, h3 {
+    @apply text-foreground;
+}
+
 h1 {
     @apply text-2xl;
 }
