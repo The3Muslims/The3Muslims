@@ -1,15 +1,17 @@
 <script lang=ts>
-    import { route, params } from "./router";
+    import { route, params, getParams } from "./router";
     
-    window.addEventListener('popstate', () => {
+    const setParams = () => {
         route.set(window.location.pathname);
+        params.set(getParams());
         
         for (const key in $params) {
             if ($params.hasOwnProperty(key)) {
                 route.set($route.replace(`:${key}`, $params[key]));
             }
         }
-    });
+    }
+    window.addEventListener('popstate', setParams);
 </script>
 
 <slot />
