@@ -8,7 +8,7 @@
 
 <Navbar />
 
-<main class="p-5">
+<main class=" overflow-x-hidden">
   <Router>
     <Route path="/" component={Home} />
     <Route path="/posts/:id" component={Posts} />
