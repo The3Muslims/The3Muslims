@@ -1,4 +1,4 @@
-<script>
+<script lang=ts >
 
 </script>
 <!-- contains all kinds of cards like elements/content  -->
@@ -6,11 +6,15 @@
 <div
 class="
 grid 
-grid-cols-[repeat(auto-fill,minmax(300px,1fr))] 
-gap-x-4
-gap-y-8
-{$$props.calss} 
-">
+grid-cols-[repeat(auto-fill,minmax(theme(maxWidth.videoCard),1fr))] 
+gap-2xthick
 
-<slot></slot>
+border-2xthick
+border-transparent
+
+mb-3xthick
+
+{$$props.class} 
+">
+    <slot></slot>
 </div>

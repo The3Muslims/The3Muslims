@@ -1,4 +1,4 @@
-<script lang=ts>
+<script lang=ts >
 
 import TagButton from '../../components/Buttons/TagButton.svelte'
 import TextCard from '../../components/Cards/TextCard.svelte'
@@ -60,9 +60,16 @@ image="/images/background3.png"
     top-[calc(50%_-_theme(height.parallaxCard)/2)]
     left-[theme(width.ladingImage)]
     transition-[right_,_left,_width] 
-    max-phone:left-[calc(50%_-_theme(width.cardPhone)_/_2)] 
-    max-tablet:left-[calc(50%_-_(theme(width.cardTablet))/2)]  
-    desktop:left-[calc(50%_-_theme(width.cardPhone))]
+    
+    desktop:left-[calc(50%_-_theme(width.readable)/2)]
+
+    max-w-cardDesktop 
+    max-h-[calc((theme(height.parallaxSection)/2))] 
+
+    tablet:right-2xthick 
+
+    max-tablet:left-2xthick
+    max-tablet:right-2xthick
     ">
         <TextContainer>
             <h1>Hello world</h1>
@@ -141,9 +148,17 @@ image="/images/background3.png"
     top-[calc(50%_-_theme(height.parallaxCard)/2)]
     left-[theme(width.ladingImage)]
     transition-[right_,_left,_width] 
-    max-phone:left-[calc(50%_-_theme(width.cardPhone)_/_2)] 
-    max-tablet:left-[calc(50%_-_(theme(width.cardTablet))/2)]  
-    desktop:left-[calc(50%_-_theme(width.cardPhone))]
+    
+    desktop:left-[calc(50%_-_theme(width.readable)/2)]
+
+    max-w-cardDesktop 
+    max-h-[calc((theme(height.parallaxSection)/2))] 
+
+    tablet:right-2xthick 
+
+    max-tablet:left-2xthick
+    max-tablet:right-2xthick
+    
     ">
         <TextContainer>
             <h1>Hello world</h1>
@@ -173,7 +188,7 @@ image="/images/background3.png"
     </TagContainer>
 
 
-    <CardContainer class="static h-[100px]">
+    <CardContainer class="static ">
         <VideoCard class="" to="/" image={Image} title={Title} description={Text}/>
         <VideoCard class="" to="/" image={Image} title={Title} description={Text}/>
         <VideoCard class="" to="/" image={Image} title={Title} description={Text}/>
@@ -187,6 +202,7 @@ image="/images/background3.png"
 
 
 </ContentSection>
+
 
 
 

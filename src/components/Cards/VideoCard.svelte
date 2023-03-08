@@ -1,25 +1,34 @@
 
 
-<script>
+<script lang=ts >
 import Link from "../../router/Link.svelte"
 
+let Image = `/images/background4.png`
+
+function handleImgError (e){
+        // e.target.src=`/images/background4.png`
+        console.log(e.target.src)
+        e.target.src=Image
+    }
 </script>
 
 <Link 
 to={$$props.to}
 class=" 
-bg-accent
-
-max-h-[600px]
-
-grid
+bg-card
+h-auto
+max-h-videoCard
+min-w-videoCard
+flex
+flex-col
 gap-4
 p-4
 
 rounded-xl 
 border-solid
-border-[calc(card/2)]
-border-transparent 
+border-[calc(theme(borderWidth.card)/8)]
+border-transparent
+
 
 items-start
 content-start
@@ -29,9 +38,19 @@ duration-[500ms]
 overflow-auto 
 
 text-start
+m-thick
 {$$props.class}
 ">
-<img src="{$$props.image}" class="max-h-[300px]" alt="">
+<!-- svelte-ignore a11y-click-events-have-key-events -->
+<img on:error={handleImgError} 
+    class=" rounded-xl bg-black object-contain w-full max-w-videoCardImage max-h-videoCardImage h-auto place-self-center aspect-[16/9] " 
+    src="{$$props.image || Image}" 
+    alt="" 
+>
 <h3 class="place-self-start">{$$props.title === undefined ? "" : $$props.title}</h3>
-<p class="place-self-start font-normal line-clamp-5">{$$props.description === undefined ? "" : $$props.description}</p>
+
+{#if  $$props.description}
+     <p class="place-self-start font-normal line-clamp-5">{$$props.description}</p>
+     
+{/if}
 </Link>

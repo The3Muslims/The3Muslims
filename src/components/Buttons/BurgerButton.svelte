@@ -1,13 +1,14 @@
 <script>
 
-
-export let toggle;
-export let toggled=true
+import {createEventDispatcher} from 'svelte'
+const dispatch = createEventDispatcher();
+function HandleClick(){
+    dispatch("click")
+}
+export let toggled;
 // function for handilling input, "toggle" have to be passed form the parent element
 // toggled needs to be passed and bind with parent element for the button to behave correctly. 
-const handleToggle=()=>{
-    toggle()
-}
+
 // export let toggle= false
 </script>
 
@@ -17,9 +18,9 @@ const handleToggle=()=>{
 <button class="grid place-items-center w-[40px] h-[40px] duration-500 stroke-gold
         burger
         {$$props.class}
-        {toggled === true ? "active" : ""}
+        {toggled ? "active" : ""}
       "
-      on:click={handleToggle}>
+      on:click={HandleClick}>
       <svg
       class=" " viewBox="0 0 10.583333 10.583333" version="1.1"
       

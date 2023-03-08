@@ -1,10 +1,11 @@
-<script lang="ts">
+<script lang=ts >
 
 </script>
 
 <div 
 class="
 bg-accent
+[&>*]:!text-gold
 relative 
 grid 
 w-36 

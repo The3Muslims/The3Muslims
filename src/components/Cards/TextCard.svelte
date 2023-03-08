@@ -1,4 +1,9 @@
-<script>
+<script lang=ts >
+import {createEventDispatcher} from 'svelte'
+const dispatch = createEventDispatcher();
+function HandleClick(){
+    dispatch("click")
+}
 
 </script>
 
@@ -11,26 +16,23 @@
 <div 
 id="parallax" 
 class=" 
-bg-accent/80
-absolute
-px-4 
+bg-card
+pr-thick
+min-h-textCard
 h-[auto]
-
-max-w-cardDesktop 
-max-h-[calc((theme(height.parallaxSection)/2))] 
-tablet:w-[calc(100%_-_theme(width.ladingImage)_-_1rem)] 
-
 rounded-xl 
-border-card 
+border-card
 border-transparent 
-max-phone:w-cardPhone 
-max-tablet:w-cardTablet 
-
 duration-[500ms] 
 overflow-auto 
 
 
+max-w-readable
+
 {$$props.class}
-">
+"
+on:click={HandleClick}
+
+>
 <slot />
 </div>
