@@ -19,6 +19,7 @@ module.exports = {
 
 
         "accent"     : "#501b1d",
+        "card"       : "#501b1de8",
         
         "background" : "#2e1114",
         
@@ -28,16 +29,16 @@ module.exports = {
         "gold"       : "#d6b34d",
         "foreground" : "#ADADAD",
         
+        "link"       : "#AB381F",
+        "visitied"   : "#ffe6aa ",
+        
         "gradient-1" : "#721E27",
         "gradient-2" : "#500C14",
         "gradient-3" : "#721E27",
         "gradient-4" : "#500C14",
 
       },
-      spacing:{
-        "card" : "1rem",
-        "landingImage" : "50px"
-      },
+      
       width:{
         "readable"      : "900px",
         "cardDesktop"   : "900px",
@@ -45,31 +46,70 @@ module.exports = {
         "cardPhone"     : "400px",
         "ladingImage"   : "400px",
         
+        "videoCard"     : "350px",
       },
       maxWidth:{
         "readable"      : "900px",
 
-
+        "videoCard"     : "350px",
+        "videoCardImage": "400px",
       },
       minWidth:{
 
-      },
-      borderWidth: {
-        "card" : "1rem"
+        "videoCard"       : "220px",
+        "videoCardImage"  : "200px",
       },
       height:{
-        "parallaxSection": "600px",
-        "parallaxCard"   : "400px",
-        "Logo"           : "50px",
+        "parallaxSection" : "600px",
+        "parallaxCard"    : "400px",
+        "Logo"            : "50px",
         
+        "videoCard"       : "300px",
+        "videoCardImage"  : "300px",
+
+        "textCard"        : "300px",
       },
       maxHeight:{
         "parallaxSection": "600px",
+        
+        "videoCard"      : "500px",
+        "videoCardImage" : "300px",
       },
       minHeight:{
         "parallaxSection": "600px",
-      }
-  
+
+        "videoCardImage" : "150px",
+
+        "textCard"       : "100px",
+      },
+      padding:{
+        "4xthick" : "5rem",
+        "3xthick" : "2.5rem",
+        "2xthick" : "1rem",
+        "xthick" : ".75rem",
+        "thick" : ".5rem",
+        "thin"  : ".25rem",      
+      },
+      borderWidth: {
+        "card" : "1rem",
+        "4xthick" : "5rem",
+        "3xthick" : "2.5rem",
+        "2xthick" : "1rem",
+        "xthick" : ".75rem",
+        "thick" : ".5rem",
+        "thin"  : ".25rem",  
+      },
+      spacing:{
+        "card" : "1rem",
+        "landingImage" : "50px",
+        "4xthick" : "5rem",
+        "3xthick" : "2.5rem",
+        "2xthick" : "1rem",
+        "xthick" : ".75rem",
+        "thick" : ".5rem",
+        "thin"  : ".25rem", 
+      },
+
     },
   },
   plugins: [

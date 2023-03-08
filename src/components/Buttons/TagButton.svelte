@@ -1,4 +1,4 @@
-<script>
+<script lang=ts >
 
     export let to;
     export let id;
@@ -18,11 +18,11 @@ min-w-[6rem]
 w-fit 
 place-self-center 
 bg-accent 
-text-gold 
+!text-gold 
 px-2 py-1  
 font-mono font-extrabold 
 text-sm 
-duration-200 
+duration-300 
 uppercase 
 rounded-full 
 transition-all  

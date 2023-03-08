@@ -15,7 +15,7 @@ function parallax(){
         if(i>0)
         {
             Ypos = ( parent.y + Moving[i].getBoundingClientRect().height * counter ) *0.5  ;
-            Moving[i].style.top   = -Ypos + 300+ Yaxies *0.05  + "px"
+            Moving[i].style.top   = -Ypos + 200+ Yaxies *0.05  + "px"
             counter ++;
         }
         else
