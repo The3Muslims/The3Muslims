@@ -61,7 +61,8 @@ image="/images/background3.png"
     transition-[right_,_left,_width] 
     
     desktop:left-[calc(theme(width.readable)]
-
+    desktop:right-thick
+    
     max-w-readable 
     max-h-[calc((theme(height.parallaxSection)/2))] 
 
@@ -147,12 +148,14 @@ image="/images/background3.png"
     left-[theme(width.ladingImage)]
     transition-[right_,_left,_width] 
     
-    desktop:left-[calc(theme(width.ladingImage)+5%)]
-    desktop:right-[5%]
+    desktop:left-[calc(theme(width.readable)]
+    desktop:right-thick
+    
     max-w-readable 
     max-h-[calc((theme(height.parallaxSection)/2))] 
 
     tablet:right-2xthick 
+
     max-tablet:left-2xthick
     max-tablet:right-2xthick
     

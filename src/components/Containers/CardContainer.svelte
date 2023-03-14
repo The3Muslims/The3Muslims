@@ -6,7 +6,7 @@
 <div
 class="
 grid 
-grid-cols-[repeat(auto-fill,minmax(theme(maxWidth.videoCard),1fr))] 
+grid-cols-[repeat(auto-fill,minmax(theme(maxWidth.Card),1fr))] 
 gap-2xthick
 
 border-2xthick

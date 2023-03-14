@@ -28,11 +28,12 @@
     
     ensures that a text container does not exceed a readable with 
 -->
+<!-- svelte-ignore a11y-click-events-have-key-events -->
 <div 
 class=" 
 bg-card
 pr-thick
-min-h-textCard
+min-h-Card
 h-[auto]
 rounded-xl 
 border-card

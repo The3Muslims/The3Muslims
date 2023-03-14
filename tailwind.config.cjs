@@ -40,41 +40,35 @@ module.exports = {
 
         "ladingImage"   : "400px",
         
-        "videoCard"     : "350px",
+        "Card"     : "150px",
       },
       maxWidth:{
         "readable"      : "900px",
 
-        "videoCard"     : "350px",
-        "videoCardImage": "400px",
+        "Card"     : "250px",
       },
       minWidth:{
 
-        "videoCard"       : "220px",
-        "videoCardImage"  : "200px",
+        "Card"     : "150px",
       },
       height:{
         "parallaxSection" : "600px",
         "parallaxCard"    : "400px",
         "Logo"            : "50px",
         
-        "videoCard"       : "300px",
-        "videoCardImage"  : "300px",
+        "Card"       : "300px",
 
-        "textCard"        : "300px",
+        "Card"        : "300px",
       },
       maxHeight:{
         "parallaxSection": "600px",
         
-        "videoCard"      : "500px",
-        "videoCardImage" : "300px",
+        "Card"      : "500px",
       },
       minHeight:{
         "parallaxSection": "600px",
 
-        "videoCardImage" : "150px",
-
-        "textCard"       : "100px",
+        "Card"       : "100px",
       },
       padding:{
         "4xthick" : "5rem",

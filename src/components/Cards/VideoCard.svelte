@@ -17,8 +17,8 @@ to={$$props.to}
 class=" 
 bg-card
 h-auto
-max-h-videoCard
-min-w-videoCard
+max-h-Card
+min-w-Card
 flex
 flex-col
 gap-4
@@ -26,7 +26,7 @@ p-4
 
 rounded-xl 
 border-solid
-border-[calc(theme(borderWidth.card)/8)]
+border-thick
 border-transparent
 
 
@@ -43,7 +43,7 @@ m-thick
 ">
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <img on:error={handleImgError} 
-    class=" rounded-xl bg-black object-contain w-full max-w-videoCardImage max-h-videoCardImage h-auto place-self-center aspect-[16/9] " 
+    class=" rounded-xl bg-black object-contain w-full   h-auto place-self-center aspect-[16/9] " 
     src="{$$props.image || Image}" 
     alt="" 
 >
