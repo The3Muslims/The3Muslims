@@ -11,9 +11,9 @@ module.exports = {
   theme: {
     extend: {
       screens:{
-        'phone' : '640px',
-        'tablet' : '768px',
-        'desktop' : '1336px',
+        'phone' : '600px',
+        'tablet' : '850px',
+        'desktop' : '1200px',
       },
       colors: {
 
@@ -32,18 +32,12 @@ module.exports = {
         "link"       : "#AB381F",
         "visitied"   : "#ffe6aa ",
         
-        "gradient-1" : "#721E27",
-        "gradient-2" : "#500C14",
-        "gradient-3" : "#721E27",
-        "gradient-4" : "#500C14",
 
       },
       
       width:{
         "readable"      : "900px",
-        "cardDesktop"   : "900px",
-        "cardTablet"    : "600px",
-        "cardPhone"     : "400px",
+
         "ladingImage"   : "400px",
         
         "videoCard"     : "350px",

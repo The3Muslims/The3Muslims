@@ -35,13 +35,12 @@ image="/images/background3.png"
     relative
     h-[auto]
     w-ladingImage
-    tablet:left-6 
+    tablet:left-thin 
     left-[calc(50%_-_(theme(width.ladingImage)/2))]
     top-landingImage
     border-transparent 
     border-card
     rounded-xl
-    px-3
     transition-[right_,_left,_width] 
     duration-[500ms] 
     overflow-auto 
@@ -61,9 +60,9 @@ image="/images/background3.png"
     left-[theme(width.ladingImage)]
     transition-[right_,_left,_width] 
     
-    desktop:left-[calc(50%_-_theme(width.readable)/2)]
+    desktop:left-[calc(theme(width.readable)]
 
-    max-w-cardDesktop 
+    max-w-readable 
     max-h-[calc((theme(height.parallaxSection)/2))] 
 
     tablet:right-2xthick 
@@ -127,13 +126,12 @@ image="/images/background3.png"
     relative
     h-[auto]
     w-ladingImage
-    tablet:left-6 
+    tablet:left-thin 
     left-[calc(50%_-_(theme(width.ladingImage)/2))]
     top-landingImage
     border-transparent 
     border-card
     rounded-xl
-    px-3
     transition-[right_,_left,_width] 
     duration-[500ms] 
     overflow-auto 
@@ -149,13 +147,12 @@ image="/images/background3.png"
     left-[theme(width.ladingImage)]
     transition-[right_,_left,_width] 
     
-    desktop:left-[calc(50%_-_theme(width.readable)/2)]
-
-    max-w-cardDesktop 
+    desktop:left-[calc(theme(width.ladingImage)+5%)]
+    desktop:right-[5%]
+    max-w-readable 
     max-h-[calc((theme(height.parallaxSection)/2))] 
 
     tablet:right-2xthick 
-
     max-tablet:left-2xthick
     max-tablet:right-2xthick
     
