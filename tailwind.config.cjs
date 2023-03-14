@@ -60,14 +60,10 @@ module.exports = {
 
         "Card"        : "300px",
       },
-      maxHeight:{
-        "parallaxSection": "600px",
-        
+      maxHeight:{  
         "Card"      : "500px",
       },
       minHeight:{
-        "parallaxSection": "600px",
-
         "Card"       : "100px",
       },
       padding:{
@@ -76,7 +72,9 @@ module.exports = {
         "2xthick" : "1rem",
         "xthick" : ".75rem",
         "thick" : ".5rem",
-        "thin"  : ".25rem",      
+        "thin"  : ".25rem",
+        "xthin"  : ".15rem",
+        "2xthin"  : ".10rem",
       },
       borderWidth: {
         "card" : "1rem",
@@ -86,6 +84,8 @@ module.exports = {
         "xthick" : ".75rem",
         "thick" : ".5rem",
         "thin"  : ".25rem",  
+        "xthin"  : ".15rem",
+        "2xthin"  : ".10rem",
       },
       spacing:{
         "card" : "1rem",
@@ -96,6 +96,8 @@ module.exports = {
         "xthick" : ".75rem",
         "thick" : ".5rem",
         "thin"  : ".25rem", 
+        "xthin"  : ".15rem", 
+        "2xthin"  : ".10rem", 
       },
 
     },

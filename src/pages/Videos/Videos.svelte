@@ -117,7 +117,7 @@
     </VideoInfoSection >
 
     <ContentSection>
-        <div class="mx-thick flex justify-evenly gap-thin rounded-full border-gold border-thin p-thick">
+        <div class="mx-thick flex justify-evenly gap-thin rounded-full border-gold border-xthin p-thick">
             <button class=" {videos ? "[&>h3]:text-accent bg-gold " : "" } font-bold border-thin border-transparent rounded-xl min-w-[100px] transition-all duration-300" on:click={ShowVideos}>
                 <h3 class="text-lg" >Videos</h3>
             </button>
