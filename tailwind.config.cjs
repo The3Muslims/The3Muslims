@@ -11,9 +11,9 @@ module.exports = {
   theme: {
     extend: {
       screens:{
-        'phone' : '640px',
-        'tablet' : '768px',
-        'desktop' : '1336px',
+        'phone' : '600px',
+        'tablet' : '850px',
+        'desktop' : '1200px',
       },
       colors: {
 
@@ -32,55 +32,39 @@ module.exports = {
         "link"       : "#AB381F",
         "visitied"   : "#ffe6aa ",
         
-        "gradient-1" : "#721E27",
-        "gradient-2" : "#500C14",
-        "gradient-3" : "#721E27",
-        "gradient-4" : "#500C14",
 
       },
       
       width:{
         "readable"      : "900px",
-        "cardDesktop"   : "900px",
-        "cardTablet"    : "600px",
-        "cardPhone"     : "400px",
+
         "ladingImage"   : "400px",
         
-        "videoCard"     : "350px",
+        "Card"     : "150px",
       },
       maxWidth:{
         "readable"      : "900px",
 
-        "videoCard"     : "350px",
-        "videoCardImage": "400px",
+        "Card"     : "250px",
       },
       minWidth:{
 
-        "videoCard"       : "220px",
-        "videoCardImage"  : "200px",
+        "Card"     : "150px",
       },
       height:{
         "parallaxSection" : "600px",
         "parallaxCard"    : "400px",
         "Logo"            : "50px",
         
-        "videoCard"       : "300px",
-        "videoCardImage"  : "300px",
+        "Card"       : "300px",
 
-        "textCard"        : "300px",
+        "Card"        : "300px",
       },
-      maxHeight:{
-        "parallaxSection": "600px",
-        
-        "videoCard"      : "500px",
-        "videoCardImage" : "300px",
+      maxHeight:{  
+        "Card"      : "500px",
       },
       minHeight:{
-        "parallaxSection": "600px",
-
-        "videoCardImage" : "150px",
-
-        "textCard"       : "100px",
+        "Card"       : "100px",
       },
       padding:{
         "4xthick" : "5rem",
@@ -88,7 +72,9 @@ module.exports = {
         "2xthick" : "1rem",
         "xthick" : ".75rem",
         "thick" : ".5rem",
-        "thin"  : ".25rem",      
+        "thin"  : ".25rem",
+        "xthin"  : ".15rem",
+        "2xthin"  : ".10rem",
       },
       borderWidth: {
         "card" : "1rem",
@@ -98,6 +84,8 @@ module.exports = {
         "xthick" : ".75rem",
         "thick" : ".5rem",
         "thin"  : ".25rem",  
+        "xthin"  : ".15rem",
+        "2xthin"  : ".10rem",
       },
       spacing:{
         "card" : "1rem",
@@ -108,6 +96,8 @@ module.exports = {
         "xthick" : ".75rem",
         "thick" : ".5rem",
         "thin"  : ".25rem", 
+        "xthin"  : ".15rem", 
+        "2xthin"  : ".10rem", 
       },
 
     },

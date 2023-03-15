@@ -35,7 +35,7 @@ class="
 grid
 relative
 z-0 
-min-h-parallaxSection
+h-parallaxSection
 overflow-hidden 
 {$$props.class}
 " 
