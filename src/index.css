@@ -1,3 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html{
+    @apply m-0 p-0 ;
+}
+
+body {
+    @apply  bg-no-repeat bg-accent bg-gradient-to-b from-accent to-background overflow-x-hidden min-h-screen m-0 p-0 
+}
+
+p, span, a, li, td, th {
+    @apply text-foreground w-full;
+}
+
+
+h1, h2, h3
+{
+    @apply text-gold w-full;
+}
+
+h1 {
+    @apply text-5xl mb-4;
+}
+h2 {
+    @apply text-4xl mb-2;
+}
+h3 {
+    @apply text-3xl mb-1;
+}

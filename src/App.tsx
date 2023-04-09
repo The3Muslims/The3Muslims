@@ -1,5 +1,5 @@
 export default () => {
   return (
-    <div className="text-4xl">Hello world</div>
+    <h1 className="text-4xl">Hello world</h1>
   )
 }
