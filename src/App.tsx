@@ -8,7 +8,7 @@ export default () => {
         Pages={["Home","Videos","Posts"]}
         Name={"Username"}
     />
-    <Home></Home>
+    <Home/>
 </>
   )
 }
