@@ -1,19 +1,24 @@
-import ParallaxSection from "../../components/Section/ParallaxSection";
-import ContentSection from "../../components/Section/ContentSection";
+import ParallaxSection from "../components/Section/ParallaxSection"
+import ContentSection from "../components/Section/ContentSection"
 
-import Landing from "../../Data/Landing.json"
+import Landing from "../Data/Landing.json"
 
-function Home(props:Object)
-{
+import { FunctionComponent } from "react"
 
+
+interface HomeProps {
+    
+}
+ 
+const Home: FunctionComponent<HomeProps> = (props) => {
+    // functions used for rendering content based on values of the section type
     const RenderFunctions = {
-        "Parallax" : (section:Object)=>{
+        Parallax : (section:Object)=>{
             const{Image,Background,Quote}=section.Content
             
             return(<ParallaxSection Quote={Quote} Image={Image} Background={Background} ID="test" />)
         },
-        "Content"  : (section:Object)=>{
-            console.log(Image)
+        Content  : (section:Object)=>{
             return(<ContentSection 
                 ID={"12"}
                 Content={section.Content}
@@ -21,7 +26,6 @@ function Home(props:Object)
         },
         
     }
-
     let Elements = Landing.map(section=>{
         // console.log(section)
         return (RenderFunctions[section.Type](section))
@@ -33,7 +37,7 @@ function Home(props:Object)
     {Elements}
 </>
     )
-    
 }
-
+ 
 export default Home;
+

@@ -31,12 +31,16 @@ function ParallaxSection(props:Props)
     relative
     z-0 
     h-parallaxSection
-    overflow-hidden 
+    max-phone:h-[300px]
+    max-tablet:h-[450px]
+    overflow-hidden
+    transition-all 
+    
     " 
     style={{
         backgroundImage: `url(${props.Background})` ,
-        backgroundPosition: "center",
-        backgroundSize:"cover",
+        backgroundPosition: `center top`,
+        backgroundSize:"auto 100%",
         backgroundRepeat: "no-repeat",
         backgroundAttachment: "fixed"
     }}>

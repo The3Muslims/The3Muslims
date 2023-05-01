@@ -1,47 +1,55 @@
-interface Props{
-    Text : String,
-    ID:String,
-    Class:String,
-    To: String,
+
+import React,{ FunctionComponent } from "react";
+import { Link } from "react-router-dom"
+
+interface LinkProps
+  extends Omit<
+    React.AnchorHTMLAttributes<HTMLAnchorElement>,
+    "href"
+  > {
+  replace?: boolean;
+  state?: any;
+  to: To;
+  reloadDocument?: boolean;
+  preventScrollReset?: boolean;
+  relative?: "route" | "path";
+  Class : String,
+  Text : String,
+}
+
+type To = string | Partial<Path>;
+
+interface Path {
+  pathname: string;
+  search: string;
+  hash: string;
 }
 
 
-function TagButton(props:Props)
-{
-
-
+const LinkButton: FunctionComponent<LinkProps> = (props) => {
     return(
-<div 
-id="parallax" 
-className={`
-min-w-[2rem] 
-w-fit 
-place-self-center 
-bg-accent 
-!text-gold 
-px-2 py-1  
-font-mono font-extrabold 
-text-sm 
-duration-300 
-uppercase 
-rounded-l 
-transition-all  
-hover:shadow-xl 
-hover:bg-highlight
-text-center
+<Link 
+  to={props.to}
+  reloadDocument={props.reloadDocument}
+  preventScrollReset={props.preventScrollReset}
+  relative={props.relative}
 
+  id="parallax" 
 
-`+props.Class}
+  className={`
+  text-xl
+  font-bold
+  place-content-center 
+  place-items-center 
+  text-link
 
->
-    {props.Text ? <p>{props.Text}</p>: null}
-
-</div>
+  ${props.Class}`}
+  >
+    {props.Text}
+</Link>
     )
-    
-
-
 }
+ 
+export default LinkButton;
 
-export default TagButton;
 

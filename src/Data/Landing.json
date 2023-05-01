@@ -2,12 +2,9 @@
     {
         "Type": "Parallax",
         "Content": {
-            "Quote": {
-                "Title": "Welcome",
-                "Text":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam ut fugit, officia similique repellendus dolor explicabo placeat iusto quae deserunt vero nam dolores accusantium pariatur possimus sunt"
-            },
-            "Image": "/images/Logo.png",
-            "Background": "/images/background3.png"
+            
+            "Image": "/images/Logo.jpg",
+            "Background": "/images/MainBG.jpg"
         },
         "Upload_Date": 1666721514220,
         "Modified_Date": 1666721514220,

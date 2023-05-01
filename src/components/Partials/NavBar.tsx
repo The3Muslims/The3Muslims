@@ -1,12 +1,16 @@
-import React from "react";
+import React, { FunctionComponent } from "react";
+import LinkButton from "../Buttons/Link";
 
-function NavBar(props:object)
-{
-    let Pages,Theme,Name;
+interface NavBarProps {
+    Pages : String[],
+}
+ 
+const NavBar: FunctionComponent<NavBarProps> = (props) => {
+    let NavLinks;
     let [Toggled,setToggled] = React.useState(false);
 
-    Pages = (props.Pages) ? props.Pages.map((page)=>{
-        return(<p className="max-phone:text-xl text-3xl transition-all  font-bold text-center place-items-center text-link">{page}</p>)
+    NavLinks = (props.Pages) ? props.Pages.map((page,index)=>{
+        return(<LinkButton id={`NavLink-${index}`} Text={page} to={`${page.toLocaleLowerCase()}`} Class="max-phone:text-xl text-3xl transition-all  font-bold text-center place-items-center text-link"/>)
     }) : [];
 
     
@@ -47,8 +51,9 @@ function NavBar(props:object)
             <p className="  text-3xl transition-all  font-bold text-center place-items-center text-link" >T3M</p>
         </div>
         
-        <div className="place-items-center  align-center  [&>p]:text-link [&>p]:text-xl  select-none font-bold text-foreground relative flex text-sm  w-fill gap-thick left-0 top-0 max-phone:top-[-6rem] max-phone:left-[-1rem] items-center transition-all duration-500 justify-around">
-            {Pages}
+        <div className="flex align-center  [&>p]:text-link [&>p]:text-xl  select-none font-bold text-foreground relative text-sm   left-0 top-0 max-phone:top-[-6rem] max-phone:left-[-1rem] items-center transition-all duration-500  gap-2xthick justify-between w-full">
+
+            {NavLinks}
         </div>
         <div className="flex relative gap-xthic place-items-center justify-around align-center ">
 
@@ -80,7 +85,7 @@ function NavBar(props:object)
     </nav>
 
     <div className={`w-full gap-8 py-6 grid grid-cols-1 top-20 auto-rows-max transition-all duration-[300ms] ease-in-out absolute h-[calc(100%_-_5rem)]  align-items-start bg-background  text-foreground z-50 ${Toggled ? "left-0": "left-full"} `}>
-        {Pages}
+        {NavLinks}
     </div>
     </>
     )
@@ -90,5 +95,6 @@ function NavBar(props:object)
         setToggled(!Toggled)
     }
 }
-
+ 
 export default NavBar;
+
