@@ -1,20 +1,20 @@
-import React from "react";
+import React, { FunctionComponent } from "react";
 import TagButton from "../Buttons/TagButton";
-import GenericCard from "../Cards/GenericCard";
 import Videos from "../../Data/Videos.json"
+import VideoCard from "../Cards/VideoCard";
+
+    
 
 
-interface Props{
+interface CardContainerProps {
     Tags:String,
     Videos:any,
     ID:String,
     Class:String,
+
 }
-
-
-
-function CardContainer(props:Props)
-{
+ 
+const CardContainer: FunctionComponent<CardContainerProps> = (props) => {
     let Tags = props.Tags ?  props.Tags.map((Tag,index)=>{
         return (<TagButton Text={Tag}/>)
     }): null
@@ -22,9 +22,7 @@ function CardContainer(props:Props)
     let Vids = props.Videos ?  Videos.map((Video,index)=>{
 
         
-        return(<GenericCard Content={
-            <>
-                <img src={Video.Content.Thumb} className={`
+        return(<VideoCard Thump={Video.Content.Thumb} Class={`
                 rounded-xl 
                 bg-black 
                 object-contain 
@@ -32,37 +30,13 @@ function CardContainer(props:Props)
                 h-auto 
                 place-self-center 
                 aspect-[16/9] 
-                `}></img>
-                <h3>{Video.Content.Title}</h3>
-                {Video.Content.Description ? <p className="place-self-start font-normal line-clamp-3">{Video.Content.Description}</p> : null } 
-            </>
+                `}
+        Title={Video.Content.Title}
+        Description={Video.Content.Description} ID={`Video-${index}`} Tags={undefined}
+        to={`/videos/${Video.ID}`}            />
+            )
         }
-        Class={`
-        bg-card
-        h-auto
-        max-h-Card
-        min-w-Card
-        flex
-        flex-col
-        gap-4
-        p-4
-        
-        rounded-xl 
-        border-solid
-        border-thick
-        border-transparent
-        
-        
-        items-start
-        content-start
-        justify-start
-        
-        duration-[500ms] 
-        overflow-auto 
-        
-        text-start
-        m-thick`} />)
-    }): null
+    ):null
 
     return(
 <div
@@ -82,8 +56,6 @@ ${props.Class}`}
     {Vids}
 </div>
     )
-    
 }
-
+ 
 export default CardContainer;
-

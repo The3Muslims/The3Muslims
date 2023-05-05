@@ -14,7 +14,7 @@ interface LinkProps
   preventScrollReset?: boolean;
   relative?: "route" | "path";
   Class : String,
-  Text : String,
+  Content : any,
 }
 
 type To = string | Partial<Path>;
@@ -37,6 +37,7 @@ const LinkButton: FunctionComponent<LinkProps> = (props) => {
   id="parallax" 
 
   className={`
+  max-tablet:text-lg
   text-xl
   font-bold
   place-content-center 
@@ -45,7 +46,7 @@ const LinkButton: FunctionComponent<LinkProps> = (props) => {
 
   ${props.Class}`}
   >
-    {props.Text}
+    {props.Content}
 </Link>
     )
 }

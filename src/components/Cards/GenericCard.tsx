@@ -1,14 +1,16 @@
-import React, {useState,useRef} from 'react'
+import  { FunctionComponent} from 'react'
 
-interface Props{
+
+
+interface GenericCardProps {
     Content : any,
     ID:String,
     Class:String,
+
 }
+ 
+const GenericCard: FunctionComponent<GenericCardProps> = (props) => {
 
-
-function GenericCard(props:Props)
-{
 
 
     return(

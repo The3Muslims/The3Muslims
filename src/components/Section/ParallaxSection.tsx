@@ -1,7 +1,9 @@
 import TextCard from '../Cards/TextCard'
-import React, {useState,useRef} from 'react'
+import React, {useState,useRef, FunctionComponent} from 'react'
 
-interface Props{
+
+
+interface ParallaxSedctionProps {
     Content : object,
     Quote:Object,
     Image: any,
@@ -9,13 +11,9 @@ interface Props{
     ID:String,
     Class:String,
 }
-
-
-function ParallaxSection(props:Props)
-{
-
-
-
+ 
+const ParallaxSection: FunctionComponent<ParallaxSedctionProps> = (props) => {
+    
     window.addEventListener('scroll',parallax)
     window.addEventListener('resize',parallax)
 
@@ -26,33 +24,49 @@ function ParallaxSection(props:Props)
     return(
 <section
     id={props.ID}
-    className="
+    className={`
     grid
     relative
     z-0 
     h-parallaxSection
-    max-phone:h-[300px]
-    max-tablet:h-[450px]
+    max-phone:h-[calc(theme(height.parallaxSection)*0.6)]
+    max-tablet:h-[calc(theme(height.parallaxSection)*0.8)]
     overflow-hidden
     transition-all 
     
-    " 
+    bg-cover
+    
+    bg-center
+
+    bg-no-repeat
+    bg-fixed
+
+    bg-[url(${props.Background})]
+
+    backdrop:blur-2xl
+    `}
     style={{
-        backgroundImage: `url(${props.Background})` ,
-        backgroundPosition: `center top`,
-        backgroundSize:"auto 100%",
-        backgroundRepeat: "no-repeat",
-        backgroundAttachment: "fixed"
-    }}>
+        backgroundImage: `url(${props.Background})`,
+        
+    }}
+    
+    >
 
     {props.Image ?  
     <img src={props.Image} id={"parallax"} 
         className="
             relative
             h-[auto]
+            max-phone:w-[calc(((theme(width.ladingImage)*0.6)))]
+            max-tablet:w-[calc(((theme(width.ladingImage)*0.8)))]
             w-ladingImage
+            
+            
+            max-phone:left-[calc(50%-((theme(width.ladingImage)*0.6))/2)]
+            max-tablet:left-[calc(50%-((theme(width.ladingImage)*0.8))/2)]
+
             tablet:left-thin 
-            left-[calc(50%_-_(theme(width.ladingImage)/2))]
+            left-[calc(50%_-_((theme(width.ladingImage))/2))]
             top-landingImage
             border-transparent 
             border-thick
@@ -68,19 +82,28 @@ function ParallaxSection(props:Props)
         }
     { props.Quote ? <TextCard Quote={props.Quote} ID={"undefined"} Class={`
     absolute
+
+    max-phone:top-[calc(50%-(theme(height.landingImage)*0.7)/2)]
+    max-tablet:top-[calc(50%-(theme(height.landingImage)*0.8)/2)]
+    top-[calc(50%-(theme(height.landingImage))/2)]
+    
+
+    max-phone:h-[calc(((theme(width.ladingImage)*0.7)))]
+    max-tablet:h-[calc(((theme(width.ladingImage)*0.8)))]
     h-landingImage
+
     max-table:w-[calc(50%_+_(theme(width.ladingImage)/2)_-_(theme(spacing.thick)))]
+    
 
     text-gold
+    left-[calc(50%_-_(theme(width.ladingImage)/2))]
     max-tablet:left-xthick
     desktop:left-[calc(50%_-_(theme(width.readable)/2))]
     right-xthick
-    left-[calc(50%_-_(theme(width.ladingImage)/2))]
-    top-landingImage
     border-transparent 
     border-card
     rounded-xl
-    transition-[right_,_left,_width] 
+    transition-all 
     duration-[500ms] 
     overflow-auto 
     `}/> : null }
@@ -97,16 +120,24 @@ function ParallaxSection(props:Props)
         // section element 
         let section = Image.current.parentElement.getBoundingClientRect() ; 
 
+        let ImgPos =Image.current.getBoundingClientRect()
+    
+        if(!section && !Image || !Image.current && !ImgPos)
+            return
         // image element inside the section, with class parallax
         let Ypos
         
         // // calculating new position value. 
-        Ypos = ( -section.y  + 150 )  ;
+        Ypos = ( -section.y + (ImgPos.height*1.6)   )  ;
 
-        Image.current.style.top =  Ypos* 1.3  + 'px'
+        let bottom = (section.height *0.8 )/Ypos
+
+
+        
+        Image.current.style.top = 150+(  -section.y  *   bottom ) + 'px'
 
     }
 }
+ 
 
-export default ParallaxSection;
-
+export default ParallaxSection

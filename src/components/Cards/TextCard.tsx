@@ -1,16 +1,14 @@
-import React, {useState,useRef} from 'react'
+import React, {useState,useRef, FunctionComponent} from 'react'
 
-interface Props{
+
+interface TextCardProps {
     Quote : Object,
     ID:String,
     Class:String,
 }
-
-
-function TextCard(props:Props)
-{
-
-
+ 
+const TextCard: FunctionComponent<TextCardProps> = (props) => {
+   
     const {Text,Title} = props.Quote
     return(
 <div 

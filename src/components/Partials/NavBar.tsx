@@ -1,6 +1,9 @@
 import React, { FunctionComponent } from "react";
 import LinkButton from "../Buttons/Link";
 
+import Logo from "../Buttons/Logo";
+
+
 interface NavBarProps {
     Pages : String[],
 }
@@ -10,7 +13,7 @@ const NavBar: FunctionComponent<NavBarProps> = (props) => {
     let [Toggled,setToggled] = React.useState(false);
 
     NavLinks = (props.Pages) ? props.Pages.map((page,index)=>{
-        return(<LinkButton id={`NavLink-${index}`} Text={page} to={`${page.toLocaleLowerCase()}`} Class="max-phone:text-xl text-3xl transition-all  font-bold text-center place-items-center text-link"/>)
+        return(<LinkButton id={`NavLink-${index}`} Content={page} to={`${page.toLocaleLowerCase()}`} Class="max-phone:text-xl text-3xl transition-all  font-bold text-center place-items-center text-link"/>)
     }) : [];
 
     
@@ -25,31 +28,16 @@ const NavBar: FunctionComponent<NavBarProps> = (props) => {
     grid
     grid-cols-[1fr_4fr_1fr]
     place-items-center
-    bg-background 
+    bg-background
+    backdrop:blur-xl
     
     
     
     ">
         
-        <div className="
-        bg-accent
-        [&>*]:!text-gold
-        relative 
-        grid 
-        
-        p-thin
-        px-2xthick
-        transition-all 
-        duration-500
-        rounded-xl
-        place-items-center
-        font-bold
-        h-fit
-        place-self-center
-        select-none
-        ">
-            <p className="  text-3xl transition-all  font-bold text-center place-items-center text-link" >T3M</p>
-        </div>
+        <Logo to={"/home"} Class={``} Text={`T3M`}>
+
+        </Logo>
         
         <div className="flex align-center  [&>p]:text-link [&>p]:text-xl  select-none font-bold text-foreground relative text-sm   left-0 top-0 max-phone:top-[-6rem] max-phone:left-[-1rem] items-center transition-all duration-500  gap-2xthick justify-between w-full">
 
