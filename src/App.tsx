@@ -1,5 +1,19 @@
+import React from "react";
+import NavBar from "./components/Partials/NavBar";
+
+
+
+
+
+
+
 export default () => {
   return (
-    <h1 className="text-4xl">Hello world</h1>
+<>
+
+    <NavBar Pages={['Home','Videos','About']}/>
+    
+
+</>
   )
 }

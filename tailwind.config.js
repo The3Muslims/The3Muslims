@@ -41,31 +41,34 @@ export default {
       width:{
         "readable"      : "900px",
 
-        "ladingImage"   : "400px",
+        "ladingImage"   : "300px",
         
-        "Card"     : "150px",
+        "Card"          : "150px",
       },
       maxWidth:{
         "readable"      : "900px",
 
-        "Card"     : "250px",
+        "Card"          : "250px",
       },
       minWidth:{
 
-        "Card"     : "150px",
+        "Card"          : "150px",
       },
       height:{
         "parallaxSection" : "600px",
         "parallaxCard"    : "400px",
         "Logo"            : "50px",
         
-        "Card"       : "300px",
+        "landingImage"   : "300px",
+
+
+        "Card"            : "300px",
       },
       maxHeight:{  
-        "Card"      : "500px",
+        "Card"            : "500px",
       },
       minHeight:{
-        "Card"       : "100px",
+        "Card"            : "100px",
       },
       padding:{
         "4xthick" : "5rem",

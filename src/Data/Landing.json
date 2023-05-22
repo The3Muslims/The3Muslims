@@ -1,60 +1,58 @@
-{
-    "Sections": [
-        {
-            "Type": "Parallax",
-            "Content": {
-                "Title": "Welcome",
-                "Message": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam ut fugit, officia similique repellendus dolor explicabo placeat iusto quae deserunt vero nam dolores accusantium pariatur possimus sunt",
-                "Image": "/images/Logo.png",
-                "Background": "/images/background3.png"
-            },
-            "Upload_Date": 1666721514220,
-            "Modified_Date": 1666721514220,
-            "__v": 0
+[
+    {
+        "Type": "Parallax",
+        "Content": {
+            
+            "Image": "/images/Logo.jpg",
+            "Background": "/images/MainBG.jpg"
         },
-        {
-            "Type": "Content",
-            "Content": {
-                "Title": "Hello world",
-                "Text": "Ab veniam impedit iste, mollitia et quae ipsum iure cupiditate repellat harum aliquid officia deleniti quos dolorem! Quos quod quam, corporis nemo molestiae quas unde sint iure facilis veritatis exercitationem!\nOdio vero et vitae iste suscipit! Nisi dolore sapiente a ratione porro optio sint maxime nobis. Ab tempora, voluptatum quas cum, aperiam hic sequi modi commodi atque odio similique odit!"
-            },
-            "Upload_Date": 1666721514220,
-            "Modified_Date": 1666721514220,
-            "__v": 0
+        "Upload_Date": 1666721514220,
+        "Modified_Date": 1666721514220,
+        "__v": 0
+    },
+    {
+        "Type": "Content",
+        "Content": {
+            "Title": "Hello world",
+            "Text": "Ab veniam impedit iste, mollitia et quae ipsum iure cupiditate repellat harum aliquid officia deleniti quos dolorem! Quos quod quam, corporis nemo molestiae quas unde sint iure facilis veritatis exercitationem!\nOdio vero et vitae iste suscipit! Nisi dolore sapiente a ratione porro optio sint maxime nobis. Ab tempora, voluptatum quas cum, aperiam hic sequi modi commodi atque odio similique odit!"
         },
-        {
-            "Type": "Parallax",
-            "Content": {
+        "Upload_Date": 1666721514220,
+        "Modified_Date": 1666721514220,
+        "__v": 0
+    },
+    {
+        "Type": "Parallax",
+        "Content": {
+            "Quote": {
                 "Title": "MessageTitle",
-                "Message": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam ut fugit, officia similique repellendus dolor explicabo placeat iusto quae deserunt vero nam dolores accusantium pariatur possimus sunt",
-                "Image": null,
+                "Text" :"Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam ut fugit, officia similique repellendus dolor explicabo placeat iusto quae deserunt vero nam dolores accusantium pariatur possimus sunt"},
+                "Image": "/images/background2.jpg",
                 "Background": "/images/background2.jpg"
-            },
-            "Upload_Date": 1666721514220,
-            "Modified_Date": 1666721514220,
-            "__v": 0
         },
-        {
-            "Type": "Content",
-            "Content": {
-                "Title": "Videos",
-                "Text": "Ab veniam impedit iste, mollitia et quae ipsum iure cupiditate repellat harum aliquid officia deleniti quos dolorem! Quos quod qua.",
-                "Tags": [
-                    "Lorem",
-                    "ipsum",
-                    "dolor",
-                    "sit",
-                    "consectetur",
-                    "adipisicing",
-                    "elit",
-                    "Maiores",
-                    "aspernatur"
-                ],
-                "Videos": true
-            },
-            "Upload_Date": 1666721514220,
-            "Modified_Date": 1666721514220,
-            "__v": 0
-        }
-    ]
-}
+        "Upload_Date": 1666721514220,
+        "Modified_Date": 1666721514220,
+        "__v": 0
+    },
+    {
+        "Type": "Content",
+        "Content": {
+            "Title": "Videos",
+            "Text": "Ab veniam impedit iste, mollitia et quae ipsum iure cupiditate repellat harum aliquid officia deleniti quos dolorem! Quos quod qua.",
+            "Tags": [
+                "Lorem",
+                "ipsum",
+                "dolor",
+                "sit",
+                "consectetur",
+                "adipisicing",
+                "elit",
+                "Maiores",
+                "aspernatur"
+            ],
+            "Videos": true
+        },
+        "Upload_Date": 1666721514220,
+        "Modified_Date": 1666721514220,
+        "__v": 0
+    }
+]
