@@ -3,8 +3,7 @@
         "Type": "Parallax",
         "Content": {
             
-            "Image": "/images/Logo.jpg",
-            "Background": "/images/MainBG.jpg"
+            "Background": "/images/Banner.JPG"
         },
         "Upload_Date": 1666721514220,
         "Modified_Date": 1666721514220,
@@ -26,7 +25,6 @@
             "Quote": {
                 "Title": "MessageTitle",
                 "Text" :"Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam ut fugit, officia similique repellendus dolor explicabo placeat iusto quae deserunt vero nam dolores accusantium pariatur possimus sunt"},
-                "Image": "/images/background2.jpg",
                 "Background": "/images/background2.jpg"
         },
         "Upload_Date": 1666721514220,

@@ -21,6 +21,9 @@ const ParallaxSection: FunctionComponent<ParallaxSedctionProps> = (props) => {
     Image = useRef()
     
     // let section = this;
+
+    // max-phone:h-[calc(theme(height.parallaxSection)*0.6)]
+    // max-tablet:h-[calc(theme(height.parallaxSection)*0.8)]
     return(
 <section
     id={props.ID}
@@ -29,8 +32,7 @@ const ParallaxSection: FunctionComponent<ParallaxSedctionProps> = (props) => {
     relative
     z-0 
     h-parallaxSection
-    max-phone:h-[calc(theme(height.parallaxSection)*0.6)]
-    max-tablet:h-[calc(theme(height.parallaxSection)*0.8)]
+    
     overflow-hidden
     transition-all 
     
@@ -52,19 +54,20 @@ const ParallaxSection: FunctionComponent<ParallaxSedctionProps> = (props) => {
     
     >
 
+{/* max-phone:w-[calc(((theme(width.ladingImage)*0.6)))]
+            max-tablet:w-[calc(((theme(width.ladingImage)*0.8)))]
+            max-phone:left-[calc(50%-((theme(width.ladingImage)*0.6))/2)]
+            max-tablet:left-[calc(50%-((theme(width.ladingImage)*0.8))/2)]
+ */}
     {props.Image ?  
     <img src={props.Image} id={"parallax"} 
         className="
             relative
             h-[auto]
-            max-phone:w-[calc(((theme(width.ladingImage)*0.6)))]
-            max-tablet:w-[calc(((theme(width.ladingImage)*0.8)))]
             w-ladingImage
             
             
-            max-phone:left-[calc(50%-((theme(width.ladingImage)*0.6))/2)]
-            max-tablet:left-[calc(50%-((theme(width.ladingImage)*0.8))/2)]
-
+            
             tablet:left-thin 
             left-[calc(50%_-_((theme(width.ladingImage))/2))]
             top-landingImage
@@ -82,7 +85,8 @@ const ParallaxSection: FunctionComponent<ParallaxSedctionProps> = (props) => {
         }
     { props.Quote ? <TextCard Quote={props.Quote} ID={"undefined"} Class={`
     absolute
-
+    
+    bg-card/80
     max-phone:top-[calc(50%-(theme(height.landingImage)*0.7)/2)]
     max-tablet:top-[calc(50%-(theme(height.landingImage)*0.8)/2)]
     top-[calc(50%-(theme(height.landingImage))/2)]

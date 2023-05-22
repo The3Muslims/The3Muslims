@@ -21,19 +21,19 @@ export default {
       colors: {
 
 
-        "accent"     : "#501b1d",
-        "card"       : "#501b1de8",
+        "accent"     : "#1D4ECD",
+        "card"       : "#0E0C10",
+        // 03001C
+        "background" : "#0E0C10",
         
-        "background" : "#2e1114",
-        
-        "border"     : "#64485c",
-        "highlight"  : "#83677b",
+        "border"     : "#E9F8F9",
+        "highlight"  : "#26282B",
 
-        "gold"       : "#d6b34d",
-        "foreground" : "#ADADAD",
+        "gold"       : "#E9F8F9",
+        "foreground" : "#D1D4C9",
         
-        "link"       : "#AB381F",
-        "visitied"   : "#ffe6aa ",
+        "link"       : "#E9F8F9",
+        "visited"   : "#ffe6aa ",
         
 
       },
